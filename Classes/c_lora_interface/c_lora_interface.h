@@ -2,6 +2,8 @@
 #define C_LORA_INTERFACE_H
 
 #include "../main_libs.h"
+#include "../datagram.h"
+
 
 class c_lora_interface
 {

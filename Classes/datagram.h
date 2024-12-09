@@ -5,12 +5,15 @@
 
 class c_datagram
 {
-    uint8_t id : 5;
-    bool error : 1;
-    uint16_t value : 10;
+private:
+    uint8_t id : DTG_ID_SIZE;
+    bool error : DTG_ERROR_SIZE;
+    uint16_t value : DTG_VALUE_SIZE;
     uint16_t sum;
 public:
     c_datagram(uint8_t id , bool error, uint8_t value);
+    uint16_t concatenate();
+    uint16_t getSum();
 };
 /*
 class c_frame

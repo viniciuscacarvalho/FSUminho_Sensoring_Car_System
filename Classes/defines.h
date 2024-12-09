@@ -54,6 +54,18 @@
 #define LORA_SPI_MISO  9 //GPIO9  PIN21
 #define LORA_SPI_MOSI 10 //GPIO10 PIN19
 #define LORA_SPI_SCLK 11 //GPIO11 PIN23
+
+//FRAME
+#define LORA_SOF_VALUE 0b10101010 //0xAA
+
+//------------------------------------------------------------------------------------------
+//Datagram defines
+
+//------------------------------------------------------------------------------------------
+#define DTG_ID_SIZE 5
+#define DTG_ERROR_SIZE 1
+#define DTG_VALUE_SIZE 10
+
 //------------------------------------------------------------------------------------------
 //GPIO defines
 
