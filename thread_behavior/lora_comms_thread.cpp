@@ -14,6 +14,7 @@ void *t_LoRaComms(void *arg) {
     sum += LORA_SOF_VALUE;
 
     //DataGrams
+    //c_datagram to_send ;// try to initializer before if possible
     while(!lora_comms->TxBuffer.empty())
     {
         //gets the top of the list
