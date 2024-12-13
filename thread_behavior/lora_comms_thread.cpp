@@ -26,7 +26,7 @@ void *t_LoRaComms(void *arg) {
         sum += to_send.getSum();
 
         //send it
-        spi.send(LORA_NSS_PIN, LORA_REG_FIFO, payload);
+        spi.send(LORA_NSS_PIN, LORA_REG_FIFO, payload,2);
     }
 
     //Check Sum;
