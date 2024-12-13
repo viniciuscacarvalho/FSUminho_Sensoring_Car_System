@@ -9,8 +9,10 @@ private:
     uint8_t resolution;
     uint8_t numChannels;
     uint8_t channel;
+protected:
+    uint8_t chipSelect;
 public:
-    c_analog_to_spi(uint8_t numChaneels,uint8_t resolution,uint8_t channel);
+    c_analog_to_spi(uint8_t numChaneels,uint8_t resolution,uint8_t channel, uint8_t chipSelect);
     ~c_analog_to_spi();
     uint8_t getChannel();
     void setChannel(uint8_t channel);

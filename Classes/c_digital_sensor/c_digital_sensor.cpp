@@ -1,6 +1,6 @@
 #include "c_digital_sensor.h"
 
-c_digital_sensor :: c_digital_sensor( eDigitalSensorType sensorType, char* id , uint8_t GPIOpin)
+c_digital_sensor :: c_digital_sensor( eDigitalSensorType sensorType, char id , uint8_t GPIOpin)
 {
     this->sensorType = sensorType;
     setID(id);
@@ -22,7 +22,7 @@ bool c_digital_sensor :: readPin()
     return this->value;
 }
 
-char* c_digital_sensor :: getID()
+char c_digital_sensor :: getID()
 {
     return this->id;
 }
@@ -37,7 +37,7 @@ uint8_t c_digital_sensor :: getPin()
     return this->GPIOpin;
 }
 
-void c_digital_sensor :: setID(char* id)
+void c_digital_sensor :: setID(char id)
 {
-    strcpy(this->id,id);
+    this->id = id;
 }

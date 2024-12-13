@@ -21,9 +21,9 @@ bool c_lora_interface :: init()
     spi_conection.send(LORA_NSS_PIN,LORA_REG_DIO_MAPPING_1,LORA_DIO1_ISR_ON);
 
     //frequency configuration
-    spi_conection.send(LORA_NSS_PIN,LORA_REG_FRF_LW,LORA_FRF_433M_LW);
-    spi_conection.send(LORA_NSS_PIN,LORA_REG_FRF_MD,LORA_FRF_433M_MD);
-    spi_conection.send(LORA_NSS_PIN,LORA_REG_FRF_HG,LORA_FRF_433M_HG);
+    spi_conection.send(LORA_NSS_PIN,LORA_REG_FRF_LW,LORA_FRF_433M,3);
+    //spi_conection.send(LORA_NSS_PIN,LORA_REG_FRF_MD,LORA_FRF_433M_MD);
+    //spi_conection.send(LORA_NSS_PIN,LORA_REG_FRF_HG,LORA_FRF_433M_HG);
 
     //Fifo configuration
     spi_conection.send(LORA_NSS_PIN,LORA_REG_FIFO_TX_BASE,LORA_FIFO_TX_BASE_FULL_MEMORY);
@@ -38,18 +38,25 @@ bool c_lora_interface :: init()
 
 bool c_lora_interface :: connect()
 {
+    //creates a connection thread // not implemented yet
     return 0;
 }
 
 int c_lora_interface :: send(c_datagram to_send)
 {
-    if(this->TxBuffer_counter++ < LORA_TX_BUFFER)
+    if(this->TxBuffer_counter < LORA_TX_BUFFER)
+    {
         this->TxBuffer.push(to_send);
+        TxBuffer_counter++; //do not optimize it will make sense with the else
+        return 0;
+    }
+        //else
+        //add the send_thread to ready
 
     return -ENOBUFS;
 }
 
-c_datagram c_lora_interface :: receive()
+c_datagram c_lora_interface :: receive()// not used rn :D
 {
     if (this->RxBuffer.empty())
     {

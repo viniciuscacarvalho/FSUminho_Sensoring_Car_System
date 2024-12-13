@@ -15,6 +15,7 @@ public:
     uint16_t concatenate();
     uint16_t getSum();
 };
+
 /*
 class c_frame
 {

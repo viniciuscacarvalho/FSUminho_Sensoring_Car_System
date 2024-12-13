@@ -1,6 +1,6 @@
 #include "c_analog_sensor.h"
 
-c_analog_sensor::c_analog_sensor(eAnalogSensorType sensorType,char* id, float min, float max)
+c_analog_sensor::c_analog_sensor(eAnalogSensorType sensorType,char id, float min, float max)
 {
     this->sensorType = sensorType;
     setID(id);
@@ -64,12 +64,12 @@ void c_analog_sensor::update()
 
 }
 
-void c_analog_sensor::setID(char* id)
+void c_analog_sensor::setID(char id)
 {
-    strcpy(this->id,id);
+    this->id = id;
 }
 
-char* c_analog_sensor::getID()
+char c_analog_sensor::getID()
 {
     return this->id;
 }

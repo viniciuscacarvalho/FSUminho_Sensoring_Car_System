@@ -7,7 +7,7 @@
 
 class c_main_system
 {
-    c_analog_to_spi channelSelector;
+    //c_analog_to_spi channelSelector;
     c_wssensor wheelSpeedSensors[2];
     c_apps pedalPositionSensors[2];
     c_brake_pressure brakePressureSensor;

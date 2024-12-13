@@ -1,7 +1,7 @@
 #include "c_analog_to_spi.h"
 
 
-c_analog_to_spi :: c_analog_to_spi(uint8_t numChannels,uint8_t resolution,uint8_t channel)
+c_analog_to_spi :: c_analog_to_spi(uint8_t numChannels,uint8_t resolution,uint8_t channel,uint8_t chipSelect)
 {
     this->numChannels = numChannels;
     this->resolution = resolution;

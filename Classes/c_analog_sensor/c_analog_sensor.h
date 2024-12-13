@@ -11,17 +11,17 @@ enum eAnalogSensorType
 class c_analog_sensor
 {
 private:
-    int16_t rawValue;
     float scaledValue;
     float maxValue;
     float minValue;
     bool errorFlag;
-    char id[6];//later change to 6bit id
+    char id;//later change to 6bit id
     eAnalogSensorType sensorType;
     uint8_t samplingTime;
-
+protected:
+    int16_t rawValue;
 public:
-    c_analog_sensor(eAnalogSensorType sensorType,char* id, float min, float max);
+    c_analog_sensor(eAnalogSensorType sensorType,char id, float min, float max);
     ~c_analog_sensor();
     eAnalogSensorType getSensorType();
     int16_t getRawValue();
@@ -33,8 +33,8 @@ public:
     void resetSensor();
     void scaleValue();
     void update();
-    void setID(char* id);
-    char* getID();
+    void setID(char id);
+    char getID();
     bool isConnected();
 
 };

@@ -34,14 +34,17 @@
 #define LORA_FIFO_RX_BASE_FULL_MEMORY 0x00
 
 //lora frequencies
+#define LORA_FRF_169M 0x2A6645
 #define LORA_FRF_169M_LW 0x45
 #define LORA_FRF_169M_MD 0x66
 #define LORA_FRF_169M_HG 0x2A
 
+#define LORA_FRF_433M 0x6C8000
 #define LORA_FRF_433M_LW 0x00
 #define LORA_FRF_433M_MD 0x80
 #define LORA_FRF_433M_HG 0x6C
 
+#define LORA_FRF_868M 0xD9A017
 #define LORA_FRF_868M_LW 0x17
 #define LORA_FRF_868M_MD 0xA0
 #define LORA_FRF_868M_HG 0xD9
@@ -66,13 +69,20 @@
 #define DTG_ERROR_SIZE 1
 #define DTG_VALUE_SIZE 10
 
+//ids
+#define DTG_APPS_ID_0 0b00000
+#define DTG_APPS_ID_1 0b00001
+#define DTG_BRAKE_ID 0b00010
+#define DTG_WSS_ID_0 0b00011
+#define DTG_WSS_ID_1 0b00100
+
 //------------------------------------------------------------------------------------------
 //GPIO defines
 
 //------------------------------------------------------------------------------------------
-#define BRAKE_LED_GPIO 22 //GPIO22 PIN15
+#define BRAKE_LED_GPIO 22     //GPIO22 PIN15
 #define EMERGENCY_LED_GPIO 17 //GPIO17 PIN11
-#define BUZZER_GPIO 27 //GPIO27 PIN13
+#define BUZZER_GPIO 27        //GPIO27 PIN13
 
 //------------------------------------------------------------------------------------------
 //SPI defines
@@ -93,6 +103,23 @@
 //------------------------------------------------------------------------------------------
 #define WSS0_GPIO 5 //GPIO5 PIN29
 #define WSS1_GPIO 6 //GPIO6 PIN31
+
+#define WSS_TIME_PERIOD 1000
+#define WSS_WHELL_RADIUS 0.13
+//------------------------------------------------------------------------------------------
+//APPs defines
+//------------------------------------------------------------------------------------------
+#define APPS_MIN 0.5
+#define APPS_MAX 0.5
+
+//------------------------------------------------------------------------------------------
+//Brake defines
+//------------------------------------------------------------------------------------------
+#define BRAKE_MIN 0.5
+#define BRAKE_MAX 0.5
+
+
+
 //------------------------------------------------------------------------------------------
 //I2C defines
 
@@ -104,11 +131,17 @@
 //ADC defines
 
 //------------------------------------------------------------------------------------------
-#define ADC_SPI_CS0 24 //GPIO24 PIN18
+#define ADC_SPI_CS0  24 //GPIO24 PIN18
 #define ADC_SPI_MISO  9 //GPIO9  PIN21
 #define ADC_SPI_MOSI 10 //GPIO10 PIN19
 #define ADC_SPI_SCLK 11 //GPIO11 PIN23
-//------------------------------------------------------------------------------------------
+
+#define ADC_CHANNELS_NUMBER 8
+#define ADC_RESOLUTION 10
+
+#define ADC_APPS_0_CHN 0
+#define ADC_APPS_1_CHN 1
+#define ADC_BRAKE_CHN 2
 
 
 

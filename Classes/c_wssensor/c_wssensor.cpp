@@ -1,6 +1,6 @@
 #include "c_wssensor.h"
 
-c_wssensor :: c_wssensor(eDigitalSensorType sensorType, char* id , uint8_t GPIOpin, uint16_t timePeriod,const float wheelRadius) : c_digital_sensor(sensorType, id, GPIOpin)
+c_wssensor :: c_wssensor(eDigitalSensorType sensorType, char id , uint8_t GPIOpin, uint16_t timePeriod,const float wheelRadius) : c_digital_sensor(sensorType, id, GPIOpin)
 {
     //digital sensor init
     this->sensorType = sensorType;

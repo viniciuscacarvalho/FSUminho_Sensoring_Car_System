@@ -11,6 +11,7 @@ public:
     char index;
     dummy_spi();
     bool send(char chip_select ,char addr,char to_send);
+    bool send(char chip_select ,char addr,uint32_t to_send,char size);
     uint8_t recive(char chip_select, char addr);
 };
 
