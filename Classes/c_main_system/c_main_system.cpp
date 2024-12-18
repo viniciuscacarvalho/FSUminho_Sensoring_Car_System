@@ -106,18 +106,37 @@ void c_main_system :: destroySharedMem()
 void c_main_system :: createPThreads()
 {
     is_running = true;
+    //suport init
     sem_init (&lora_semaphore     , 0, 1);
     sem_init (&action_semaphore[0], 0, 1);
     sem_init (&action_semaphore[1], 0, 1);
 
-    pthread_create(&digital_sensor_reading_thread,NULL ,t_digital_sensor_reading,this);
-    pthread_create(&analog_sensor_reading_thread ,NULL ,t_analog_sensor_reading ,this);
-    pthread_create(&action_thread                ,NULL ,t_action                ,this);
+    struct sched_param my_param;
+    //attribut init
+    pthread_attr_t high_prio_attr;
 
-    pthread_create(&read_analog_sensor_thread    ,NULL ,t_read_analog_sensor    ,this);
-    pthread_create(&read_digital_sensor_thread   ,NULL ,t_read_digital_sensor   ,this);
+    my_param.sched_priority = HIGH_PRIORITY_VALUE;
+    pthread_attr_setschedparam(&high_prio_attr,&my_param);
 
-    pthread_create(&update_display_thread        ,NULL ,t_update_display        ,this);
+    pthread_attr_init(&high_prio_attr);
+
+
+    pthread_attr_t medium_prio_attr;
+
+    my_param.sched_priority = MEDIUM_PRIORITY_VALUE;
+    pthread_attr_setschedparam(&medium_prio_attr,&my_param);
+
+    pthread_attr_init(&medium_prio_attr);
+
+    //thread behavior init
+    pthread_create(&digital_sensor_reading_thread,&high_prio_attr ,t_digital_sensor_reading,this);
+    pthread_create(&analog_sensor_reading_thread ,&high_prio_attr ,t_analog_sensor_reading ,this);
+    pthread_create(&action_thread                ,&high_prio_attr ,t_action                ,this);
+
+    pthread_create(&read_analog_sensor_thread    ,&medium_prio_attr,t_read_analog_sensor    ,this);
+    pthread_create(&read_digital_sensor_thread   ,&medium_prio_attr,t_read_digital_sensor   ,this);
+
+    //pthread_create(&update_display_thread        ,NULL ,t_update_display        ,this);
 
 
 }
