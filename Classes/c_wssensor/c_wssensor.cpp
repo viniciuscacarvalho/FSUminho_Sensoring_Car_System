@@ -14,7 +14,9 @@ c_wssensor :: c_wssensor(eDigitalSensorType sensorType, char id , uint8_t GPIOpi
 
 c_wssensor :: ~c_wssensor()
 {
+    #ifdef CLASS_DESTROY_DEBUG_MODE
     cout << "Analog Sensor destructor called" << '\n';
+    #endif
 }
 
 void c_wssensor :: isr_counter()

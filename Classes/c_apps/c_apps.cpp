@@ -7,7 +7,9 @@ c_apps :: c_apps(eAnalogSensorType sensorType,char id, float min, float max, uin
 
 c_apps :: ~c_apps()
 {
+    #ifdef CLASS_DESTROY_DEBUG_MODE
     std::cout << "APPS destructor called" << '\n';
+    #endif
 }
 
 void c_apps :: setImplausability()

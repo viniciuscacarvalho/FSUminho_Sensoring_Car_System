@@ -9,7 +9,9 @@ c_digital_sensor :: c_digital_sensor( eDigitalSensorType sensorType, char id , u
 
 c_digital_sensor :: ~c_digital_sensor()
 {
+    #ifdef CLASS_DESTROY_DEBUG_MODE
     cout << "Digital Sensor destructor called" << '\n';
+    #endif
 }
 
 eDigitalSensorType c_digital_sensor ::  getSensorType()

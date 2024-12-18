@@ -1,4 +1,24 @@
 #include "c_main_system.h"
+#include "../../thread_behavior/thread_behavior.h"
+
+//variables
+extern bool is_running;
+extern sem_t lora_semaphore;
+extern sem_t action_semaphore[2];
+
+extern pthread_t action_thread;
+extern pthread_t analog_sensor_reading_thread;
+extern pthread_t digital_sensor_reading_thread;
+
+extern pthread_t lora_comms_thread;
+
+extern pthread_t read_analog_sensor_thread;
+
+extern pthread_t read_digital_sensor_thread;
+
+extern pthread_t update_display_thread;
+
+extern pthread_t idle_thread;
 
 c_main_system :: c_main_system() :
     //channelSelector(ADC_CHANNELS_NUMBER,ADC_RESOLUTION,0),
@@ -23,7 +43,11 @@ c_main_system :: c_main_system() :
 
 c_main_system :: ~c_main_system()
 {
-        cout << "System shutdown, Don't Panic" << '\n';
+    #ifdef CLASS_DESTROY_DEBUG_MODE
+    cout << "System shutdown, Don't Panic" << '\n';
+    #endif
+
+    shutdown();
 }
 void c_main_system :: startup()
 {
@@ -35,7 +59,8 @@ void c_main_system :: startup()
 
 void c_main_system :: shutdown()
 {
-
+    destroyPThreads();
+    destroySharedMem();
 }
 
 void c_main_system :: initSensors()
@@ -80,10 +105,27 @@ void c_main_system :: destroySharedMem()
 
 void c_main_system :: createPThreads()
 {
+    is_running = true;
+    sem_init (&lora_semaphore     , 0, 1);
+    sem_init (&action_semaphore[0], 0, 1);
+    sem_init (&action_semaphore[1], 0, 1);
+
+    pthread_create(&digital_sensor_reading_thread,NULL ,t_digital_sensor_reading,this);
+    pthread_create(&analog_sensor_reading_thread ,NULL ,t_analog_sensor_reading ,this);
+    pthread_create(&action_thread                ,NULL ,t_action                ,this);
+
+    pthread_create(&read_analog_sensor_thread    ,NULL ,t_read_analog_sensor    ,this);
+    pthread_create(&read_digital_sensor_thread   ,NULL ,t_read_digital_sensor   ,this);
+
+    pthread_create(&update_display_thread        ,NULL ,t_update_display        ,this);
+
 
 }
 
 void c_main_system :: destroyPThreads()
 {
-
+    is_running = false;
+    sem_destroy(&lora_semaphore);
+    sem_destroy(&action_semaphore[0]);
+    sem_destroy(&action_semaphore[1]);
 }

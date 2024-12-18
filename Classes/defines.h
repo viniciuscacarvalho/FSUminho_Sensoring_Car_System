@@ -3,6 +3,9 @@
 
 //INTERFACE_(REG means it is a ADDRS)_etc
 
+//#define CLASS_DESTROY_DEBUG_MODE
+//#define THREAD_DEBUG_MODE
+
 //------------------------------------------------------------------------------------------
 //lora defines
 

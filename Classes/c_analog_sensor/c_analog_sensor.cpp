@@ -9,7 +9,9 @@ c_analog_sensor::c_analog_sensor(eAnalogSensorType sensorType,char id, float min
 
 c_analog_sensor::~c_analog_sensor()
 {
+    #ifdef CLASS_DESTROY_DEBUG_MODE
     cout << "Analog Sensor destructor called" << '\n';
+    #endif
 }
 
 eAnalogSensorType c_analog_sensor ::  getSensorType()

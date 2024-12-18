@@ -7,7 +7,9 @@ c_brake_pressure ::  c_brake_pressure(eAnalogSensorType sensorType,char id, floa
 
 c_brake_pressure :: ~c_brake_pressure()
 {
+    #ifdef CLASS_DESTROY_DEBUG_MODE
     std::cout << "Brake destructor called" << '\n';
+    #endif
 }
 void c_brake_pressure :: setBraking()
 {

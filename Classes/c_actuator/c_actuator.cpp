@@ -8,7 +8,9 @@ c_actuator :: c_actuator(eActuatorType actuatorType, uint8_t GPIOpin)
 // destructor
 c_actuator :: ~c_actuator()
 {
+    #ifdef CLASS_DESTROY_DEBUG_MODE
     cout << "Actuator destructor called" << '\n';
+    #endif
 }
 
 eActuatorType c_actuator ::  getActuatorType()

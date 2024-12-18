@@ -1,0 +1,6 @@
+#ifndef THREAD_DEFINES_H
+#define THREAD_DEFINES_H
+
+#define THREAD_DEBUG_MODE
+
+#endif // THREAD_DEFINES_H

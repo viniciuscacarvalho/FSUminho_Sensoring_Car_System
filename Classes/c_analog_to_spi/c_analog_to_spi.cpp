@@ -10,7 +10,9 @@ c_analog_to_spi :: c_analog_to_spi(uint8_t numChannels,uint8_t resolution,uint8_
 
 c_analog_to_spi :: ~c_analog_to_spi()
 {
+    #ifdef CLASS_DESTROY_DEBUG_MODE
     cout << "Analog to SPI destructor called" << '\n';
+    #endif
 }
 
 uint8_t c_analog_to_spi :: getChannel()

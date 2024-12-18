@@ -3,7 +3,7 @@
 #include "Classes/c_main_system/c_main_system.h"
 #include <iostream>
 
-
+extern bool is_running;
 
 int main(int argc, char *argv[])
 {
@@ -39,5 +39,7 @@ int main(int argc, char *argv[])
     main_system.initSensors();
 
     main_system.startup();
+
+    while (is_running);
     return 0;
 }

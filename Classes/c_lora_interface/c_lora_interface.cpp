@@ -1,5 +1,7 @@
 #include "c_lora_interface.h"
 
+#include <semaphore.h>
+extern sem_t lora_semaphore;
 
 c_lora_interface :: c_lora_interface( uint32_t frequency, uint32_t timeout, uint32_t bandWigth, uint8_t crcRate)
 {
@@ -11,7 +13,9 @@ c_lora_interface :: c_lora_interface( uint32_t frequency, uint32_t timeout, uint
 
 c_lora_interface :: ~c_lora_interface()
 {
+    #ifdef CLASS_DESTROY_DEBUG_MODE
     std::cout << "LoRa Interface destructor called" << '\n';
+    #endif
 }
 
 bool c_lora_interface :: init()
@@ -50,8 +54,10 @@ int c_lora_interface :: send(c_datagram to_send)
         TxBuffer_counter++; //do not optimize it will make sense with the else
         return 0;
     }
-        //else
-        //add the send_thread to ready
+    else
+        sem_post(&lora_semaphore);
+        //reset timeout
+
 
     return -ENOBUFS;
 }
