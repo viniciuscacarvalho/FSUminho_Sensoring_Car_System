@@ -3,7 +3,8 @@
 
 #include "../main_libs.h"
 #include "../fsUminhoSensoringSystem.h"
-
+#include "../../thread_behavior/thread_behavior.h"
+#include "../../shared_memory/shared_memory.h"
 
 class c_main_system
 {

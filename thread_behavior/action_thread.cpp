@@ -9,15 +9,23 @@ void* t_action(void *arg)
     c_main_system* main_s = (c_main_system*) arg;
     cout << "Action Thread initialized successfully." << '\n';
 
+    #ifdef THREAD_DEBUG_MODE
     char i = 1;
 
     while (is_running && i)
     {
         i--;
+    #endif
+
         sem_post(&action_semaphore[0]);
         sem_post(&action_semaphore[1]);
+
+    #ifdef THREAD_DEBUG_MODE
+
     }
     is_running = false;
+    #endif
+
     pthread_exit(NULL);
 }
 

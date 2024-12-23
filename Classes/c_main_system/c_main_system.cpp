@@ -1,5 +1,5 @@
 #include "c_main_system.h"
-#include "../../thread_behavior/thread_behavior.h"
+
 
 //variables
 extern bool is_running;
@@ -95,12 +95,12 @@ void c_main_system :: deinitActuators()
 
 void c_main_system :: createSharedMem()
 {
-
+    shm_create();
 }
 
 void c_main_system :: destroySharedMem()
 {
-
+    shm_destroy();
 }
 
 void c_main_system :: createPThreads()
