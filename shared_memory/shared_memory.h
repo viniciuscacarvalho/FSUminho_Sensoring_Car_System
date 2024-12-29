@@ -7,6 +7,7 @@
 #include <iostream> //error msgs
 #include <unistd.h> //ftruncate
 #include "shm_defines.h"
+#include <string.h>
 
 using namespace std;
 
@@ -16,6 +17,6 @@ using namespace std;
 void shm_create();
 void shm_destroy();
 void shm_send(char id,float value);
-msg_t* sht_read(msg_t* to_store);
+msg_t sht_read();
 
 #endif // SHARED_MEMORY_H
