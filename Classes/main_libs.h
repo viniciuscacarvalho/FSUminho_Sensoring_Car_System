@@ -4,13 +4,16 @@
 #include <string.h>
 #include <stdint.h>
 #include <iostream>
-
+#include <pthread.h>
 #include <queue>
+#include <signal.h>
+#include <wiringPi.h>
+
 using namespace std;
 
 #include "defines.h"
 
-#include "error_list.h"
+#include "../error_handling/error_list.h"
 
 #include "dummy_spi.h"
 

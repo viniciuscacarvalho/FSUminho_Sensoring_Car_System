@@ -28,3 +28,5 @@ sem_t action_semaphore[2];
 
 //control flag
 bool is_running;
+
+bool is_lora_commns_timeout;

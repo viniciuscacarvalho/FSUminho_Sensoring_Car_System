@@ -1,5 +1,4 @@
 #include "c_lora_interface.h"
-
 #include <semaphore.h>
 extern sem_t lora_semaphore;
 

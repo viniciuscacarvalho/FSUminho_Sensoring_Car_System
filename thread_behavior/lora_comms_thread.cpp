@@ -5,6 +5,8 @@
 extern bool is_running;
 extern sem_t lora_semaphore;
 
+extern bool is_lora_commns_timeout;
+
 void *t_LoRaComms(void *arg) {
 
     c_lora_interface* lora_comms = (c_lora_interface*) (arg);
@@ -17,6 +19,13 @@ void *t_LoRaComms(void *arg) {
     {
         sem_wait(&lora_semaphore);
         //setup
+
+        if (is_lora_commns_timeout)
+        {
+            cout << "LoRa Comms Timeout reached." << '\n';
+            is_lora_commns_timeout = false;
+        }
+
         char sum = 0;
         //NSS DOWN
 

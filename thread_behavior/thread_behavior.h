@@ -2,7 +2,7 @@
 #define THREAD_BEHAVIOR_H
 
 #include "main_thread_libs.h"
-
+#include "../Classes/c_main_system/c_main_system.h"
 // separeting t_action into multiple systhems
 void *t_action(void *arg);
 void *t_analog_sensor_reading(void *arg);

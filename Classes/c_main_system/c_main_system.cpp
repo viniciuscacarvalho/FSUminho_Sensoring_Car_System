@@ -1,6 +1,5 @@
 #include "c_main_system.h"
 
-
 //variables
 extern bool is_running;
 extern sem_t lora_semaphore;
@@ -19,6 +18,9 @@ extern pthread_t read_digital_sensor_thread;
 extern pthread_t update_display_thread;
 
 extern pthread_t idle_thread;
+
+extern bool is_lora_commns_timeout;
+
 
 c_main_system :: c_main_system() :
     //channelSelector(ADC_CHANNELS_NUMBER,ADC_RESOLUTION,0),
@@ -55,7 +57,19 @@ void c_main_system :: startup()
     createSharedMem();
     createPThreads(); // start the threads
 
+    //signals
+
+    signal(SIGALRM,signal_handler_lora_communication_timeout);
+    ualarm(LORA_DATAGRAM_MAX_TIMEOUT_US,0);
+
+    //ISRs
+    wiringPiSetupGpio();
+
+    wiringPiISR(WSS0_GPIO, INT_EDGE_RISING, wss_callback_0);
+    wiringPiISR(WSS1_GPIO, INT_EDGE_RISING, wss_callback_1);
 }
+
+
 
 void c_main_system :: shutdown()
 {
@@ -65,15 +79,16 @@ void c_main_system :: shutdown()
 
 void c_main_system :: initSensors()
 {
-    this->wheelSpeedSensors[0].setID(0);
+    this->wheelSpeedSensors[0].setID(DTG_WSS_ID_0);
     this->wheelSpeedSensors[0].setPin(WSS0_GPIO);
 
-    this->wheelSpeedSensors[1].setID(0);
+    this->wheelSpeedSensors[1].setID(DTG_WSS_ID_1);
+    this->wheelSpeedSensors[1].setPin(WSS1_GPIO);
 
-    this->pedalPositionSensors[0].setID(0);
-    this->pedalPositionSensors[1].setID(0);
+    this->pedalPositionSensors[0].setID(DTG_APPS_ID_0);
+    this->pedalPositionSensors[1].setID(DTG_APPS_ID_1);
 
-    this->brakePressureSensor.setID(0);
+    this->brakePressureSensor.setID(DTG_BRAKE_ID);
 }
 
 void c_main_system :: deinitSensors()
@@ -107,6 +122,9 @@ void c_main_system :: createPThreads()
 {
     is_running = true;
     //suport init
+
+    is_lora_commns_timeout = false;
+
     sem_init (&lora_semaphore     , 0, 1);
     sem_init (&action_semaphore[0], 0, 1);
     sem_init (&action_semaphore[1], 0, 1);

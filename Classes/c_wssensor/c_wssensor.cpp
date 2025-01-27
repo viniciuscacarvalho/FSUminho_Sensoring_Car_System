@@ -10,6 +10,8 @@ c_wssensor :: c_wssensor(eDigitalSensorType sensorType, char id , uint8_t GPIOpi
     //wwsensor init
     this->timePeriod = timePeriod;
     this->wheelRadius = wheelRadius;
+
+    this->counter = 0;
 }
 
 c_wssensor :: ~c_wssensor()
@@ -19,9 +21,11 @@ c_wssensor :: ~c_wssensor()
     #endif
 }
 
-void c_wssensor :: isr_counter()
+void c_wssensor :: isr_counter(void)
 {
     this->counter++;
+    this->revolutions = this->counter % WSS_GEAR_TEETH_COUNT;
+    //wiringPiISR(PIN, INT_EDGE_BOTH, &handle);
 }
 
 uint16_t c_wssensor :: getAngularWheelSpeed()
@@ -41,5 +45,5 @@ uint16_t c_wssensor :: calculateAngularVelocity()
 
 uint16_t c_wssensor :: calculateLinearVelocity()
 {
-    return this->linearWheelsSpeed = this->angularWheelsSpeed * this->wheelRadius;
+    return this->linearWheelsSpeed = calculateAngularVelocity() * this->wheelRadius;
 }

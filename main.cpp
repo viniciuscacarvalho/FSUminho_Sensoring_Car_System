@@ -1,7 +1,9 @@
 //#include <QCoreApplication>
+#include <pthread.h>
 #include "Classes/fsUminhoSensoringSystem.h"
 #include "Classes/c_main_system/c_main_system.h"
 #include <iostream>
+#include "spi/spi_code.h"
 
 extern bool is_running;
 
@@ -40,6 +42,11 @@ int main(int argc, char *argv[])
 
     main_system.startup();
 
-    while (is_running);
+    char send_spi_test[] = {0xAA};
+
+    while (is_running)
+        spi_send(0, send_spi_test, 1);
+
+    cout << "Program ended --------" << '\n';
     return 0;
 }

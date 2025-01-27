@@ -5,6 +5,10 @@
 
 //#define CLASS_DESTROY_DEBUG_MODE
 //#define THREAD_DEBUG_MODE
+//------------------------------------------------------------------------------------------
+//Main System defines
+
+//------------------------------------------------------------------------------------------
 
 //------------------------------------------------------------------------------------------
 //lora defines
@@ -16,6 +20,9 @@
 
 #define LORA_POWER
 #define LORA_OVER_CURRENT_PROTECTION
+
+//timing
+#define LORA_DATAGRAM_MAX_TIMEOUT_US (unsigned int) ((WSS_SAMPLE_NUMBER*WSS_FREQUENCY + BRAKE_FREQUENCY*BRAKE_SAMPLE_NUMBER + APPS_SAMPLE_NUMBER *APPS_FREQUENCY ) / LORA_DATAGRAM_MAX)
 
 //registers
 #define LORA_REG_FIFO 0x00
@@ -107,21 +114,28 @@
 #define WSS0_GPIO 5 //GPIO5 PIN29
 #define WSS1_GPIO 6 //GPIO6 PIN31
 
+#define WSS_GEAR_TEETH_COUNT 16
 #define WSS_TIME_PERIOD 1000
 #define WSS_WHELL_RADIUS 0.13
+#define WSS_SAMPLE_NUMBER 1
+#define WSS_FREQUENCY 100
+
+#define WSS_COUNT 2
+
 //------------------------------------------------------------------------------------------
 //APPs defines
 //------------------------------------------------------------------------------------------
 #define APPS_MIN 0.5
 #define APPS_MAX 0.5
-
+#define APPS_SAMPLE_NUMBER 10
+#define APPS_FREQUENCY 100 //hz
 //------------------------------------------------------------------------------------------
 //Brake defines
 //------------------------------------------------------------------------------------------
 #define BRAKE_MIN 0.5
 #define BRAKE_MAX 0.5
-
-
+#define BRAKE_SAMPLE_NUMBER 10
+#define BRAKE_FREQUENCY 20 //Hz
 
 //------------------------------------------------------------------------------------------
 //I2C defines

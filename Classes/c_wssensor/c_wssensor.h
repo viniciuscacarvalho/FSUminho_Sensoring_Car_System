@@ -8,6 +8,7 @@ class c_wssensor : public c_digital_sensor
 {
 private:
     uint16_t counter;
+    uint16_t revolutions;
     uint16_t timePeriod;//should be static
     uint16_t linearWheelsSpeed;
     uint16_t angularWheelsSpeed;
@@ -16,7 +17,7 @@ private:
 public:
     c_wssensor(eDigitalSensorType sensorType, char id , uint8_t GPIOpin, uint16_t timePeriod,const float wheelRadius);
     ~c_wssensor();
-    void isr_counter();
+    void isr_counter(void);
     uint16_t getAngularWheelSpeed();
     uint16_t getLinearWheelSpeed();
     uint16_t calculateAngularVelocity();//const in case to to do the speed medium right here
