@@ -19,7 +19,6 @@ ssh_corretion:
 	@echo "Wrinting on SSH_config file"
 	echo PermitRootLogin yes >> $(user)@$(IP_ADDR):/etc/ssh/sshd_config
 	
-	
 	echo PasswordAuthentication yes >> $(user)@$(IP_ADDR):/etc/ssh
 
 wiringPi_config:
@@ -30,5 +29,6 @@ wiringPi_config:
 	
 font_transfer:
 	@echo "Transfering Font files"
+	scp /home/viny/Class_Code/Class_codification/font/DejaVuSans.ttf $(user)@$(IP_ADDR):/usr/lib/fonts
 	
 

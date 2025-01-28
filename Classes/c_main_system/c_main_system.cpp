@@ -1,4 +1,7 @@
 #include "c_main_system.h"
+#include "../../thread_behavior/thread_behavior.h"
+
+#include <wiringPi.h>
 
 //variables
 extern bool is_running;

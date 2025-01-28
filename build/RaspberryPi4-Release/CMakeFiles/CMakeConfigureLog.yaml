@@ -1,0 +1,381 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineSystem.cmake:233 (message)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      The system is: Linux - 6.8.0-51-generic - x86_64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /home/viny/buildroot/buildroot-2024.08/output/host/bin/aarch64-Buildroot-linux-gnu-g++ 
+      Build flags: 
+      Id flags: -c;--target=aarch64-Buildroot-linux-gnu 
+      
+      The output was:
+      1
+      aarch64-Buildroot-linux-gnu-g++.br_real: error: unrecognized command-line option '--target=aarch64-Buildroot-linux-gnu'
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /home/viny/buildroot/buildroot-2024.08/output/host/bin/aarch64-Buildroot-linux-gnu-g++ 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+      
+      The CXX compiler identification is GNU, found in:
+        /home/viny/Class_Code/Class_codification/build/RaspberryPi4-Release/CMakeFiles/3.28.3/CompilerIdCXX/a.out
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "/home/viny/Class_Code/Class_codification/build/RaspberryPi4-Release/CMakeFiles/CMakeScratch/TryCompile-mNpXSJ"
+      binary: "/home/viny/Class_Code/Class_codification/build/RaspberryPi4-Release/CMakeFiles/CMakeScratch/TryCompile-mNpXSJ"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_TARGET: "aarch64-Buildroot-linux-gnu"
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_C_COMPILER_TARGET: "aarch64-Buildroot-linux-gnu"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_SYSROOT: "/home/viny/buildroot/buildroot-2021.08/output/host/aarch64-Buildroot-linux-gnu/sysroot"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/viny/Class_Code/Class_codification/build/RaspberryPi4-Release/CMakeFiles/CMakeScratch/TryCompile-mNpXSJ'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_b1bf9/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_b1bf9.dir/build.make CMakeFiles/cmTC_b1bf9.dir/build
+        gmake[1]: Entering directory '/home/viny/Class_Code/Class_codification/build/RaspberryPi4-Release/CMakeFiles/CMakeScratch/TryCompile-mNpXSJ'
+        Building CXX object CMakeFiles/cmTC_b1bf9.dir/CMakeCXXCompilerABI.cpp.o
+        /home/viny/buildroot/buildroot-2024.08/output/host/bin/aarch64-Buildroot-linux-gnu-g++ --sysroot=/home/viny/buildroot/buildroot-2021.08/output/host/aarch64-Buildroot-linux-gnu/sysroot   -fdiagnostics-color=always   -v -o CMakeFiles/cmTC_b1bf9.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp
+        Using built-in specs.
+        COLLECT_GCC=/home/viny/buildroot/buildroot-2024.08/output/host/bin/aarch64-Buildroot-linux-gnu-g++.br_real
+        Target: aarch64-Buildroot-linux-gnu
+        Configured with: ./configure --prefix=/home/viny/buildroot/buildroot-2024.08/output/host --sysconfdir=/home/viny/buildroot/buildroot-2024.08/output/host/etc --enable-static --target=aarch64-Buildroot-linux-gnu --with-sysroot=/home/viny/buildroot/buildroot-2024.08/output/host/aarch64-Buildroot-linux-gnu/sysroot --enable-__cxa_atexit --with-gnu-ld --disable-libssp --disable-multilib --disable-decimal-float --enable-plugins --enable-lto --with-gmp=/home/viny/buildroot/buildroot-2024.08/output/host --with-mpc=/home/viny/buildroot/buildroot-2024.08/output/host --with-mpfr=/home/viny/buildroot/buildroot-2024.08/output/host --with-pkgversion='Buildroot 2024.08' --with-bugurl=https://gitlab.com/buildroot.org/buildroot/-/issues --without-zstd --disable-libquadmath --disable-libquadmath-support --enable-tls --enable-threads --without-isl --without-cloog --with-abi=lp64 --with-cpu=cortex-a53 --enable-languages=c,c++ --with-build-time-tools=/home/viny/buildroot/buildroot-2024.08/output/host/aarch64-Buildroot-linux-gnu/bin --enable-shared --disable-libgomp
+        Thread model: posix
+        Supported LTO compression algorithms: zlib
+        gcc version 14.2.0 (Buildroot 2024.08) 
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '--sysroot=/home/viny/buildroot/buildroot-2024.08/output/host/aarch64-Buildroot-linux-gnu/sysroot' '-fstack-protector-strong' '-fPIE' '-pie' '--sysroot=/home/viny/buildroot/buildroot-2021.08/output/host/aarch64-Buildroot-linux-gnu/sysroot' '-v' '-o' 'CMakeFiles/cmTC_b1bf9.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mcpu=cortex-a53' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_b1bf9.dir/'
+         /home/viny/buildroot/buildroot-2024.08/output/host/libexec/gcc/aarch64-Buildroot-linux-gnu/14.2.0/cc1plus -quiet -v -isysroot /home/viny/buildroot/buildroot-2021.08/output/host/aarch64-Buildroot-linux-gnu/sysroot -D_GNU_SOURCE /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_b1bf9.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mcpu=cortex-a53 -mlittle-endian -mabi=lp64 -version -fdiagnostics-color=always -fstack-protector-strong -fPIE -o /tmp/cca8vfIO.s
+        GNU C++17 (Buildroot 2024.08) version 14.2.0 (aarch64-Buildroot-linux-gnu)
+        	compiled by GNU C version 13.3.0, GMP version 6.3.0, MPFR version 4.1.1, MPC version 1.3.1, isl version none
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring nonexistent directory "/home/viny/buildroot/buildroot-2021.08/output/host/aarch64-Buildroot-linux-gnu/sysroot/usr/local/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/include/c++/14.2.0
+         /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/include/c++/14.2.0/aarch64-Buildroot-linux-gnu
+         /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/include/c++/14.2.0/backward
+         /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/include
+         /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/include-fixed
+         /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/include
+         /home/viny/buildroot/buildroot-2021.08/output/host/aarch64-Buildroot-linux-gnu/sysroot/usr/include
+        End of search list.
+        Compiler executable checksum: a8883f5c16077422f615cbd7c0a3cfbe
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '--sysroot=/home/viny/buildroot/buildroot-2024.08/output/host/aarch64-Buildroot-linux-gnu/sysroot' '-fstack-protector-strong' '-fPIE' '-pie' '--sysroot=/home/viny/buildroot/buildroot-2021.08/output/host/aarch64-Buildroot-linux-gnu/sysroot' '-v' '-o' 'CMakeFiles/cmTC_b1bf9.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mcpu=cortex-a53' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_b1bf9.dir/'
+         /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/bin/as -v -EL -march=armv8-a+crc -mabi=lp64 -o CMakeFiles/cmTC_b1bf9.dir/CMakeCXXCompilerABI.cpp.o /tmp/cca8vfIO.s
+        GNU assembler version 2.41 (aarch64-Buildroot-linux-gnu) using BFD version (GNU Binutils) 2.41
+        COMPILER_PATH=/home/viny/buildroot/buildroot-2024.08/output/host/libexec/gcc/aarch64-Buildroot-linux-gnu/14.2.0/:/home/viny/buildroot/buildroot-2024.08/output/host/libexec/gcc/aarch64-Buildroot-linux-gnu/14.2.0/:/home/viny/buildroot/buildroot-2024.08/output/host/libexec/gcc/aarch64-Buildroot-linux-gnu/:/home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/:/home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/:/home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/bin/
+        LIBRARY_PATH=/home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/:/home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/lib/../lib64/:/home/viny/buildroot/buildroot-2021.08/output/host/aarch64-Buildroot-linux-gnu/sysroot/lib/../lib64/:/home/viny/buildroot/buildroot-2021.08/output/host/aarch64-Buildroot-linux-gnu/sysroot/usr/lib/../lib64/:/home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/lib/:/home/viny/buildroot/buildroot-2021.08/output/host/aarch64-Buildroot-linux-gnu/sysroot/lib/:/home/viny/buildroot/buildroot-2021.08/output/host/aarch64-Buildroot-linux-gnu/sysroot/usr/lib/
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '--sysroot=/home/viny/buildroot/buildroot-2024.08/output/host/aarch64-Buildroot-linux-gnu/sysroot' '-fstack-protector-strong' '-fPIE' '-pie' '--sysroot=/home/viny/buildroot/buildroot-2021.08/output/host/aarch64-Buildroot-linux-gnu/sysroot' '-v' '-o' 'CMakeFiles/cmTC_b1bf9.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mcpu=cortex-a53' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_b1bf9.dir/CMakeCXXCompilerABI.cpp.'
+        Linking CXX executable cmTC_b1bf9
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b1bf9.dir/link.txt --verbose=1
+        /home/viny/buildroot/buildroot-2024.08/output/host/bin/aarch64-Buildroot-linux-gnu-g++ --sysroot=/home/viny/buildroot/buildroot-2021.08/output/host/aarch64-Buildroot-linux-gnu/sysroot  -v CMakeFiles/cmTC_b1bf9.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_b1bf9 
+        Using built-in specs.
+        COLLECT_GCC=/home/viny/buildroot/buildroot-2024.08/output/host/bin/aarch64-Buildroot-linux-gnu-g++.br_real
+        COLLECT_LTO_WRAPPER=/home/viny/buildroot/buildroot-2024.08/output/host/libexec/gcc/aarch64-Buildroot-linux-gnu/14.2.0/lto-wrapper
+        Target: aarch64-Buildroot-linux-gnu
+        Configured with: ./configure --prefix=/home/viny/buildroot/buildroot-2024.08/output/host --sysconfdir=/home/viny/buildroot/buildroot-2024.08/output/host/etc --enable-static --target=aarch64-Buildroot-linux-gnu --with-sysroot=/home/viny/buildroot/buildroot-2024.08/output/host/aarch64-Buildroot-linux-gnu/sysroot --enable-__cxa_atexit --with-gnu-ld --disable-libssp --disable-multilib --disable-decimal-float --enable-plugins --enable-lto --with-gmp=/home/viny/buildroot/buildroot-2024.08/output/host --with-mpc=/home/viny/buildroot/buildroot-2024.08/output/host --with-mpfr=/home/viny/buildroot/buildroot-2024.08/output/host --with-pkgversion='Buildroot 2024.08' --with-bugurl=https://gitlab.com/buildroot.org/buildroot/-/issues --without-zstd --disable-libquadmath --disable-libquadmath-support --enable-tls --enable-threads --without-isl --without-cloog --with-abi=lp64 --with-cpu=cortex-a53 --enable-languages=c,c++ --with-build-time-tools=/home/viny/buildroot/buildroot-2024.08/output/host/aarch64-Buildroot-linux-gnu/bin --enable-shared --disable-libgomp
+        Thread model: posix
+        Supported LTO compression algorithms: zlib
+        gcc version 14.2.0 (Buildroot 2024.08) 
+        COMPILER_PATH=/home/viny/buildroot/buildroot-2024.08/output/host/libexec/gcc/aarch64-Buildroot-linux-gnu/14.2.0/:/home/viny/buildroot/buildroot-2024.08/output/host/libexec/gcc/aarch64-Buildroot-linux-gnu/14.2.0/:/home/viny/buildroot/buildroot-2024.08/output/host/libexec/gcc/aarch64-Buildroot-linux-gnu/:/home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/:/home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/:/home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/bin/
+        LIBRARY_PATH=/home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/:/home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/lib/../lib64/:/home/viny/buildroot/buildroot-2021.08/output/host/aarch64-Buildroot-linux-gnu/sysroot/lib/../lib64/:/home/viny/buildroot/buildroot-2021.08/output/host/aarch64-Buildroot-linux-gnu/sysroot/usr/lib/../lib64/:/home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/lib/:/home/viny/buildroot/buildroot-2021.08/output/host/aarch64-Buildroot-linux-gnu/sysroot/lib/:/home/viny/buildroot/buildroot-2021.08/output/host/aarch64-Buildroot-linux-gnu/sysroot/usr/lib/
+        COLLECT_GCC_OPTIONS='--sysroot=/home/viny/buildroot/buildroot-2024.08/output/host/aarch64-Buildroot-linux-gnu/sysroot' '-fstack-protector-strong' '-fPIE' '-pie' '--sysroot=/home/viny/buildroot/buildroot-2021.08/output/host/aarch64-Buildroot-linux-gnu/sysroot' '-v' '-o' 'cmTC_b1bf9' '-shared-libgcc' '-mcpu=cortex-a53' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'cmTC_b1bf9.'
+         /home/viny/buildroot/buildroot-2024.08/output/host/libexec/gcc/aarch64-Buildroot-linux-gnu/14.2.0/collect2 -plugin /home/viny/buildroot/buildroot-2024.08/output/host/libexec/gcc/aarch64-Buildroot-linux-gnu/14.2.0/liblto_plugin.so -plugin-opt=/home/viny/buildroot/buildroot-2024.08/output/host/libexec/gcc/aarch64-Buildroot-linux-gnu/14.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccJICTJS.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/home/viny/buildroot/buildroot-2021.08/output/host/aarch64-Buildroot-linux-gnu/sysroot --eh-frame-hdr -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux -pie -o cmTC_b1bf9 /home/viny/buildroot/buildroot-2021.08/output/host/aarch64-Buildroot-linux-gnu/sysroot/usr/lib/../lib64/Scrt1.o /home/viny/buildroot/buildroot-2021.08/output/host/aarch64-Buildroot-linux-gnu/sysroot/usr/lib/../lib64/crti.o /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/crtbeginS.o -L/home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0 -L/home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/lib/../lib64 -L/home/viny/buildroot/buildroot-2021.08/output/host/aarch64-Buildroot-linux-gnu/sysroot/lib/../lib64 -L/home/viny/buildroot/buildroot-2021.08/output/host/aarch64-Buildroot-linux-gnu/sysroot/usr/lib/../lib64 -L/home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/lib -L/home/viny/buildroot/buildroot-2021.08/output/host/aarch64-Buildroot-linux-gnu/sysroot/lib -L/home/viny/buildroot/buildroot-2021.08/output/host/aarch64-Buildroot-linux-gnu/sysroot/usr/lib -z max-page-size=4096 -z common-page-size=4096 -z now -z relro CMakeFiles/cmTC_b1bf9.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/crtendS.o /home/viny/buildroot/buildroot-2021.08/output/host/aarch64-Buildroot-linux-gnu/sysroot/usr/lib/../lib64/crtn.o
+        /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/bin/ld: /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/lib/../lib64/libstdc++.so: undefined reference to `pthread_key_create@GLIBC_2.34'
+        /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/bin/ld: /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/lib/../lib64/libstdc++.so: undefined reference to `pthread_rwlock_unlock@GLIBC_2.34'
+        /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/bin/ld: /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/lib/../lib64/libstdc++.so: undefined reference to `pthread_detach@GLIBC_2.34'
+        /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/bin/ld: /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/lib/../lib64/libstdc++.so: undefined reference to `pthread_setspecific@GLIBC_2.34'
+        /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/bin/ld: /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/lib/../lib64/libgcc_s.so.1: undefined reference to `_dl_find_object@GLIBC_2.35'
+        /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/bin/ld: /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/lib/../lib64/libstdc++.so: undefined reference to `arc4random@GLIBC_2.36'
+        /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/bin/ld: /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/lib/../lib64/libstdc++.so: undefined reference to `pthread_join@GLIBC_2.34'
+        /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/bin/ld: /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/lib/../lib64/libstdc++.so: undefined reference to `pthread_rwlock_wrlock@GLIBC_2.34'
+        /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/bin/ld: /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/lib/../lib64/libstdc++.so: undefined reference to `__isoc23_strtoul@GLIBC_2.38'
+        /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/bin/ld: /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/lib/../lib64/libstdc++.so: undefined reference to `pthread_getspecific@GLIBC_2.34'
+        /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/bin/ld: /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/lib/../lib64/libstdc++.so: undefined reference to `pthread_key_delete@GLIBC_2.34'
+        /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/bin/ld: /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/lib/../lib64/libstdc++.so: undefined reference to `pthread_once@GLIBC_2.34'
+        /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/bin/ld: /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/lib/../lib64/libstdc++.so: undefined reference to `pthread_rwlock_rdlock@GLIBC_2.34'
+        /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/bin/ld: /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/lib/../lib64/libstdc++.so: undefined reference to `pthread_create@GLIBC_2.34'
+        collect2: error: ld returned 1 exit status
+        gmake[1]: *** [CMakeFiles/cmTC_b1bf9.dir/build.make:99: cmTC_b1bf9] Error 1
+        gmake[1]: Leaving directory '/home/viny/Class_Code/Class_codification/build/RaspberryPi4-Release/CMakeFiles/CMakeScratch/TryCompile-mNpXSJ'
+        gmake: *** [Makefile:127: cmTC_b1bf9/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeTestCXXCompiler.cmake:49 (try_compile)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Check for working CXX compiler: /home/viny/buildroot/buildroot-2024.08/output/host/bin/aarch64-Buildroot-linux-gnu-g++"
+    directories:
+      source: "/home/viny/Class_Code/Class_codification/build/RaspberryPi4-Release/CMakeFiles/CMakeScratch/TryCompile-d3UQRj"
+      binary: "/home/viny/Class_Code/Class_codification/build/RaspberryPi4-Release/CMakeFiles/CMakeScratch/TryCompile-d3UQRj"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_TARGET: "aarch64-Buildroot-linux-gnu"
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_C_COMPILER_TARGET: "aarch64-Buildroot-linux-gnu"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_SYSROOT: "/home/viny/buildroot/buildroot-2021.08/output/host/aarch64-Buildroot-linux-gnu/sysroot"
+    buildResult:
+      variable: "CMAKE_CXX_COMPILER_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: '/home/viny/Class_Code/Class_codification/build/RaspberryPi4-Release/CMakeFiles/CMakeScratch/TryCompile-d3UQRj'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_2a474/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_2a474.dir/build.make CMakeFiles/cmTC_2a474.dir/build
+        gmake[1]: Entering directory '/home/viny/Class_Code/Class_codification/build/RaspberryPi4-Release/CMakeFiles/CMakeScratch/TryCompile-d3UQRj'
+        Building CXX object CMakeFiles/cmTC_2a474.dir/testCXXCompiler.cxx.o
+        /home/viny/buildroot/buildroot-2024.08/output/host/bin/aarch64-Buildroot-linux-gnu-g++ --sysroot=/home/viny/buildroot/buildroot-2021.08/output/host/aarch64-Buildroot-linux-gnu/sysroot   -fdiagnostics-color=always -o CMakeFiles/cmTC_2a474.dir/testCXXCompiler.cxx.o -c /home/viny/Class_Code/Class_codification/build/RaspberryPi4-Release/CMakeFiles/CMakeScratch/TryCompile-d3UQRj/testCXXCompiler.cxx
+        Linking CXX executable cmTC_2a474
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2a474.dir/link.txt --verbose=1
+        /home/viny/buildroot/buildroot-2024.08/output/host/bin/aarch64-Buildroot-linux-gnu-g++ --sysroot=/home/viny/buildroot/buildroot-2021.08/output/host/aarch64-Buildroot-linux-gnu/sysroot CMakeFiles/cmTC_2a474.dir/testCXXCompiler.cxx.o -o cmTC_2a474 
+        /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/bin/ld: /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/lib/../lib64/libstdc++.so: undefined reference to `pthread_key_create@GLIBC_2.34'
+        /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/bin/ld: /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/lib/../lib64/libstdc++.so: undefined reference to `pthread_rwlock_unlock@GLIBC_2.34'
+        /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/bin/ld: /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/lib/../lib64/libstdc++.so: undefined reference to `pthread_detach@GLIBC_2.34'
+        /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/bin/ld: /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/lib/../lib64/libstdc++.so: undefined reference to `pthread_setspecific@GLIBC_2.34'
+        /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/bin/ld: /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/lib/../lib64/libgcc_s.so.1: undefined reference to `_dl_find_object@GLIBC_2.35'
+        /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/bin/ld: /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/lib/../lib64/libstdc++.so: undefined reference to `arc4random@GLIBC_2.36'
+        /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/bin/ld: /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/lib/../lib64/libstdc++.so: undefined reference to `pthread_join@GLIBC_2.34'
+        /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/bin/ld: /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/lib/../lib64/libstdc++.so: undefined reference to `pthread_rwlock_wrlock@GLIBC_2.34'
+        /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/bin/ld: /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/lib/../lib64/libstdc++.so: undefined reference to `__isoc23_strtoul@GLIBC_2.38'
+        /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/bin/ld: /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/lib/../lib64/libstdc++.so: undefined reference to `pthread_getspecific@GLIBC_2.34'
+        /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/bin/ld: /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/lib/../lib64/libstdc++.so: undefined reference to `pthread_key_delete@GLIBC_2.34'
+        /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/bin/ld: /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/lib/../lib64/libstdc++.so: undefined reference to `pthread_once@GLIBC_2.34'
+        /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/bin/ld: /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/lib/../lib64/libstdc++.so: undefined reference to `pthread_rwlock_rdlock@GLIBC_2.34'
+        /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/bin/ld: /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/lib/../lib64/libstdc++.so: undefined reference to `pthread_create@GLIBC_2.34'
+        collect2: error: ld returned 1 exit status
+        gmake[1]: *** [CMakeFiles/cmTC_2a474.dir/build.make:99: cmTC_2a474] Error 1
+        gmake[1]: Leaving directory '/home/viny/Class_Code/Class_codification/build/RaspberryPi4-Release/CMakeFiles/CMakeScratch/TryCompile-d3UQRj'
+        gmake: *** [Makefile:127: cmTC_2a474/fast] Error 2
+        
+      exitCode: 2
+...
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /home/viny/buildroot/buildroot-2024.08/output/host/bin/aarch64-Buildroot-linux-gnu-g++ 
+      Build flags: 
+      Id flags: -c;--target=aarch64-Buildroot-linux-gnu 
+      
+      The output was:
+      1
+      aarch64-Buildroot-linux-gnu-g++.br_real: error: unrecognized command-line option '--target=aarch64-Buildroot-linux-gnu'
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /home/viny/buildroot/buildroot-2024.08/output/host/bin/aarch64-Buildroot-linux-gnu-g++ 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+      
+      The CXX compiler identification is GNU, found in:
+        /home/viny/Class_Code/Class_codification/build/RaspberryPi4-Release/CMakeFiles/3.28.3/CompilerIdCXX/a.out
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "/home/viny/Class_Code/Class_codification/build/RaspberryPi4-Release/CMakeFiles/CMakeScratch/TryCompile-AmdRNS"
+      binary: "/home/viny/Class_Code/Class_codification/build/RaspberryPi4-Release/CMakeFiles/CMakeScratch/TryCompile-AmdRNS"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_TARGET: "aarch64-Buildroot-linux-gnu"
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_C_COMPILER_TARGET: "aarch64-Buildroot-linux-gnu"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_SYSROOT: "/home/viny/buildroot/buildroot-2021.08/output/host/aarch64-Buildroot-linux-gnu/sysroot"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/viny/Class_Code/Class_codification/build/RaspberryPi4-Release/CMakeFiles/CMakeScratch/TryCompile-AmdRNS'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_ed06b/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_ed06b.dir/build.make CMakeFiles/cmTC_ed06b.dir/build
+        gmake[1]: Entering directory '/home/viny/Class_Code/Class_codification/build/RaspberryPi4-Release/CMakeFiles/CMakeScratch/TryCompile-AmdRNS'
+        Building CXX object CMakeFiles/cmTC_ed06b.dir/CMakeCXXCompilerABI.cpp.o
+        /home/viny/buildroot/buildroot-2024.08/output/host/bin/aarch64-Buildroot-linux-gnu-g++ --sysroot=/home/viny/buildroot/buildroot-2021.08/output/host/aarch64-Buildroot-linux-gnu/sysroot   -fdiagnostics-color=always   -v -o CMakeFiles/cmTC_ed06b.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp
+        Using built-in specs.
+        COLLECT_GCC=/home/viny/buildroot/buildroot-2024.08/output/host/bin/aarch64-Buildroot-linux-gnu-g++.br_real
+        Target: aarch64-Buildroot-linux-gnu
+        Configured with: ./configure --prefix=/home/viny/buildroot/buildroot-2024.08/output/host --sysconfdir=/home/viny/buildroot/buildroot-2024.08/output/host/etc --enable-static --target=aarch64-Buildroot-linux-gnu --with-sysroot=/home/viny/buildroot/buildroot-2024.08/output/host/aarch64-Buildroot-linux-gnu/sysroot --enable-__cxa_atexit --with-gnu-ld --disable-libssp --disable-multilib --disable-decimal-float --enable-plugins --enable-lto --with-gmp=/home/viny/buildroot/buildroot-2024.08/output/host --with-mpc=/home/viny/buildroot/buildroot-2024.08/output/host --with-mpfr=/home/viny/buildroot/buildroot-2024.08/output/host --with-pkgversion='Buildroot 2024.08' --with-bugurl=https://gitlab.com/buildroot.org/buildroot/-/issues --without-zstd --disable-libquadmath --disable-libquadmath-support --enable-tls --enable-threads --without-isl --without-cloog --with-abi=lp64 --with-cpu=cortex-a53 --enable-languages=c,c++ --with-build-time-tools=/home/viny/buildroot/buildroot-2024.08/output/host/aarch64-Buildroot-linux-gnu/bin --enable-shared --disable-libgomp
+        Thread model: posix
+        Supported LTO compression algorithms: zlib
+        gcc version 14.2.0 (Buildroot 2024.08) 
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '--sysroot=/home/viny/buildroot/buildroot-2024.08/output/host/aarch64-Buildroot-linux-gnu/sysroot' '-fstack-protector-strong' '-fPIE' '-pie' '--sysroot=/home/viny/buildroot/buildroot-2021.08/output/host/aarch64-Buildroot-linux-gnu/sysroot' '-v' '-o' 'CMakeFiles/cmTC_ed06b.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mcpu=cortex-a53' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_ed06b.dir/'
+         /home/viny/buildroot/buildroot-2024.08/output/host/libexec/gcc/aarch64-Buildroot-linux-gnu/14.2.0/cc1plus -quiet -v -isysroot /home/viny/buildroot/buildroot-2021.08/output/host/aarch64-Buildroot-linux-gnu/sysroot -D_GNU_SOURCE /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_ed06b.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mcpu=cortex-a53 -mlittle-endian -mabi=lp64 -version -fdiagnostics-color=always -fstack-protector-strong -fPIE -o /tmp/ccf63YDq.s
+        GNU C++17 (Buildroot 2024.08) version 14.2.0 (aarch64-Buildroot-linux-gnu)
+        	compiled by GNU C version 13.3.0, GMP version 6.3.0, MPFR version 4.1.1, MPC version 1.3.1, isl version none
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring nonexistent directory "/home/viny/buildroot/buildroot-2021.08/output/host/aarch64-Buildroot-linux-gnu/sysroot/usr/local/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/include/c++/14.2.0
+         /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/include/c++/14.2.0/aarch64-Buildroot-linux-gnu
+         /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/include/c++/14.2.0/backward
+         /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/include
+         /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/include-fixed
+         /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/include
+         /home/viny/buildroot/buildroot-2021.08/output/host/aarch64-Buildroot-linux-gnu/sysroot/usr/include
+        End of search list.
+        Compiler executable checksum: a8883f5c16077422f615cbd7c0a3cfbe
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '--sysroot=/home/viny/buildroot/buildroot-2024.08/output/host/aarch64-Buildroot-linux-gnu/sysroot' '-fstack-protector-strong' '-fPIE' '-pie' '--sysroot=/home/viny/buildroot/buildroot-2021.08/output/host/aarch64-Buildroot-linux-gnu/sysroot' '-v' '-o' 'CMakeFiles/cmTC_ed06b.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mcpu=cortex-a53' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_ed06b.dir/'
+         /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/bin/as -v -EL -march=armv8-a+crc -mabi=lp64 -o CMakeFiles/cmTC_ed06b.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccf63YDq.s
+        GNU assembler version 2.41 (aarch64-Buildroot-linux-gnu) using BFD version (GNU Binutils) 2.41
+        COMPILER_PATH=/home/viny/buildroot/buildroot-2024.08/output/host/libexec/gcc/aarch64-Buildroot-linux-gnu/14.2.0/:/home/viny/buildroot/buildroot-2024.08/output/host/libexec/gcc/aarch64-Buildroot-linux-gnu/14.2.0/:/home/viny/buildroot/buildroot-2024.08/output/host/libexec/gcc/aarch64-Buildroot-linux-gnu/:/home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/:/home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/:/home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/bin/
+        LIBRARY_PATH=/home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/:/home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/lib/../lib64/:/home/viny/buildroot/buildroot-2021.08/output/host/aarch64-Buildroot-linux-gnu/sysroot/lib/../lib64/:/home/viny/buildroot/buildroot-2021.08/output/host/aarch64-Buildroot-linux-gnu/sysroot/usr/lib/../lib64/:/home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/lib/:/home/viny/buildroot/buildroot-2021.08/output/host/aarch64-Buildroot-linux-gnu/sysroot/lib/:/home/viny/buildroot/buildroot-2021.08/output/host/aarch64-Buildroot-linux-gnu/sysroot/usr/lib/
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '--sysroot=/home/viny/buildroot/buildroot-2024.08/output/host/aarch64-Buildroot-linux-gnu/sysroot' '-fstack-protector-strong' '-fPIE' '-pie' '--sysroot=/home/viny/buildroot/buildroot-2021.08/output/host/aarch64-Buildroot-linux-gnu/sysroot' '-v' '-o' 'CMakeFiles/cmTC_ed06b.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mcpu=cortex-a53' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_ed06b.dir/CMakeCXXCompilerABI.cpp.'
+        Linking CXX executable cmTC_ed06b
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ed06b.dir/link.txt --verbose=1
+        /home/viny/buildroot/buildroot-2024.08/output/host/bin/aarch64-Buildroot-linux-gnu-g++ --sysroot=/home/viny/buildroot/buildroot-2021.08/output/host/aarch64-Buildroot-linux-gnu/sysroot  -v CMakeFiles/cmTC_ed06b.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_ed06b 
+        Using built-in specs.
+        COLLECT_GCC=/home/viny/buildroot/buildroot-2024.08/output/host/bin/aarch64-Buildroot-linux-gnu-g++.br_real
+        COLLECT_LTO_WRAPPER=/home/viny/buildroot/buildroot-2024.08/output/host/libexec/gcc/aarch64-Buildroot-linux-gnu/14.2.0/lto-wrapper
+        Target: aarch64-Buildroot-linux-gnu
+        Configured with: ./configure --prefix=/home/viny/buildroot/buildroot-2024.08/output/host --sysconfdir=/home/viny/buildroot/buildroot-2024.08/output/host/etc --enable-static --target=aarch64-Buildroot-linux-gnu --with-sysroot=/home/viny/buildroot/buildroot-2024.08/output/host/aarch64-Buildroot-linux-gnu/sysroot --enable-__cxa_atexit --with-gnu-ld --disable-libssp --disable-multilib --disable-decimal-float --enable-plugins --enable-lto --with-gmp=/home/viny/buildroot/buildroot-2024.08/output/host --with-mpc=/home/viny/buildroot/buildroot-2024.08/output/host --with-mpfr=/home/viny/buildroot/buildroot-2024.08/output/host --with-pkgversion='Buildroot 2024.08' --with-bugurl=https://gitlab.com/buildroot.org/buildroot/-/issues --without-zstd --disable-libquadmath --disable-libquadmath-support --enable-tls --enable-threads --without-isl --without-cloog --with-abi=lp64 --with-cpu=cortex-a53 --enable-languages=c,c++ --with-build-time-tools=/home/viny/buildroot/buildroot-2024.08/output/host/aarch64-Buildroot-linux-gnu/bin --enable-shared --disable-libgomp
+        Thread model: posix
+        Supported LTO compression algorithms: zlib
+        gcc version 14.2.0 (Buildroot 2024.08) 
+        COMPILER_PATH=/home/viny/buildroot/buildroot-2024.08/output/host/libexec/gcc/aarch64-Buildroot-linux-gnu/14.2.0/:/home/viny/buildroot/buildroot-2024.08/output/host/libexec/gcc/aarch64-Buildroot-linux-gnu/14.2.0/:/home/viny/buildroot/buildroot-2024.08/output/host/libexec/gcc/aarch64-Buildroot-linux-gnu/:/home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/:/home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/:/home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/bin/
+        LIBRARY_PATH=/home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/:/home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/lib/../lib64/:/home/viny/buildroot/buildroot-2021.08/output/host/aarch64-Buildroot-linux-gnu/sysroot/lib/../lib64/:/home/viny/buildroot/buildroot-2021.08/output/host/aarch64-Buildroot-linux-gnu/sysroot/usr/lib/../lib64/:/home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/lib/:/home/viny/buildroot/buildroot-2021.08/output/host/aarch64-Buildroot-linux-gnu/sysroot/lib/:/home/viny/buildroot/buildroot-2021.08/output/host/aarch64-Buildroot-linux-gnu/sysroot/usr/lib/
+        COLLECT_GCC_OPTIONS='--sysroot=/home/viny/buildroot/buildroot-2024.08/output/host/aarch64-Buildroot-linux-gnu/sysroot' '-fstack-protector-strong' '-fPIE' '-pie' '--sysroot=/home/viny/buildroot/buildroot-2021.08/output/host/aarch64-Buildroot-linux-gnu/sysroot' '-v' '-o' 'cmTC_ed06b' '-shared-libgcc' '-mcpu=cortex-a53' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'cmTC_ed06b.'
+         /home/viny/buildroot/buildroot-2024.08/output/host/libexec/gcc/aarch64-Buildroot-linux-gnu/14.2.0/collect2 -plugin /home/viny/buildroot/buildroot-2024.08/output/host/libexec/gcc/aarch64-Buildroot-linux-gnu/14.2.0/liblto_plugin.so -plugin-opt=/home/viny/buildroot/buildroot-2024.08/output/host/libexec/gcc/aarch64-Buildroot-linux-gnu/14.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/cctqkDfA.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/home/viny/buildroot/buildroot-2021.08/output/host/aarch64-Buildroot-linux-gnu/sysroot --eh-frame-hdr -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux -pie -o cmTC_ed06b /home/viny/buildroot/buildroot-2021.08/output/host/aarch64-Buildroot-linux-gnu/sysroot/usr/lib/../lib64/Scrt1.o /home/viny/buildroot/buildroot-2021.08/output/host/aarch64-Buildroot-linux-gnu/sysroot/usr/lib/../lib64/crti.o /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/crtbeginS.o -L/home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0 -L/home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/lib/../lib64 -L/home/viny/buildroot/buildroot-2021.08/output/host/aarch64-Buildroot-linux-gnu/sysroot/lib/../lib64 -L/home/viny/buildroot/buildroot-2021.08/output/host/aarch64-Buildroot-linux-gnu/sysroot/usr/lib/../lib64 -L/home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/lib -L/home/viny/buildroot/buildroot-2021.08/output/host/aarch64-Buildroot-linux-gnu/sysroot/lib -L/home/viny/buildroot/buildroot-2021.08/output/host/aarch64-Buildroot-linux-gnu/sysroot/usr/lib -z max-page-size=4096 -z common-page-size=4096 -z now -z relro CMakeFiles/cmTC_ed06b.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/crtendS.o /home/viny/buildroot/buildroot-2021.08/output/host/aarch64-Buildroot-linux-gnu/sysroot/usr/lib/../lib64/crtn.o
+        /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/bin/ld: /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/lib/../lib64/libstdc++.so: undefined reference to `pthread_key_create@GLIBC_2.34'
+        /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/bin/ld: /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/lib/../lib64/libstdc++.so: undefined reference to `pthread_rwlock_unlock@GLIBC_2.34'
+        /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/bin/ld: /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/lib/../lib64/libstdc++.so: undefined reference to `pthread_detach@GLIBC_2.34'
+        /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/bin/ld: /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/lib/../lib64/libstdc++.so: undefined reference to `pthread_setspecific@GLIBC_2.34'
+        /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/bin/ld: /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/lib/../lib64/libgcc_s.so.1: undefined reference to `_dl_find_object@GLIBC_2.35'
+        /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/bin/ld: /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/lib/../lib64/libstdc++.so: undefined reference to `arc4random@GLIBC_2.36'
+        /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/bin/ld: /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/lib/../lib64/libstdc++.so: undefined reference to `pthread_join@GLIBC_2.34'
+        /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/bin/ld: /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/lib/../lib64/libstdc++.so: undefined reference to `pthread_rwlock_wrlock@GLIBC_2.34'
+        /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/bin/ld: /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/lib/../lib64/libstdc++.so: undefined reference to `__isoc23_strtoul@GLIBC_2.38'
+        /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/bin/ld: /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/lib/../lib64/libstdc++.so: undefined reference to `pthread_getspecific@GLIBC_2.34'
+        /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/bin/ld: /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/lib/../lib64/libstdc++.so: undefined reference to `pthread_key_delete@GLIBC_2.34'
+        /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/bin/ld: /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/lib/../lib64/libstdc++.so: undefined reference to `pthread_once@GLIBC_2.34'
+        /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/bin/ld: /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/lib/../lib64/libstdc++.so: undefined reference to `pthread_rwlock_rdlock@GLIBC_2.34'
+        /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/bin/ld: /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/lib/../lib64/libstdc++.so: undefined reference to `pthread_create@GLIBC_2.34'
+        collect2: error: ld returned 1 exit status
+        gmake[1]: *** [CMakeFiles/cmTC_ed06b.dir/build.make:99: cmTC_ed06b] Error 1
+        gmake[1]: Leaving directory '/home/viny/Class_Code/Class_codification/build/RaspberryPi4-Release/CMakeFiles/CMakeScratch/TryCompile-AmdRNS'
+        gmake: *** [Makefile:127: cmTC_ed06b/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeTestCXXCompiler.cmake:49 (try_compile)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Check for working CXX compiler: /home/viny/buildroot/buildroot-2024.08/output/host/bin/aarch64-Buildroot-linux-gnu-g++"
+    directories:
+      source: "/home/viny/Class_Code/Class_codification/build/RaspberryPi4-Release/CMakeFiles/CMakeScratch/TryCompile-GJBR1N"
+      binary: "/home/viny/Class_Code/Class_codification/build/RaspberryPi4-Release/CMakeFiles/CMakeScratch/TryCompile-GJBR1N"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_TARGET: "aarch64-Buildroot-linux-gnu"
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_C_COMPILER_TARGET: "aarch64-Buildroot-linux-gnu"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_SYSROOT: "/home/viny/buildroot/buildroot-2021.08/output/host/aarch64-Buildroot-linux-gnu/sysroot"
+    buildResult:
+      variable: "CMAKE_CXX_COMPILER_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: '/home/viny/Class_Code/Class_codification/build/RaspberryPi4-Release/CMakeFiles/CMakeScratch/TryCompile-GJBR1N'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_618a0/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_618a0.dir/build.make CMakeFiles/cmTC_618a0.dir/build
+        gmake[1]: Entering directory '/home/viny/Class_Code/Class_codification/build/RaspberryPi4-Release/CMakeFiles/CMakeScratch/TryCompile-GJBR1N'
+        Building CXX object CMakeFiles/cmTC_618a0.dir/testCXXCompiler.cxx.o
+        /home/viny/buildroot/buildroot-2024.08/output/host/bin/aarch64-Buildroot-linux-gnu-g++ --sysroot=/home/viny/buildroot/buildroot-2021.08/output/host/aarch64-Buildroot-linux-gnu/sysroot   -fdiagnostics-color=always -o CMakeFiles/cmTC_618a0.dir/testCXXCompiler.cxx.o -c /home/viny/Class_Code/Class_codification/build/RaspberryPi4-Release/CMakeFiles/CMakeScratch/TryCompile-GJBR1N/testCXXCompiler.cxx
+        Linking CXX executable cmTC_618a0
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_618a0.dir/link.txt --verbose=1
+        /home/viny/buildroot/buildroot-2024.08/output/host/bin/aarch64-Buildroot-linux-gnu-g++ --sysroot=/home/viny/buildroot/buildroot-2021.08/output/host/aarch64-Buildroot-linux-gnu/sysroot CMakeFiles/cmTC_618a0.dir/testCXXCompiler.cxx.o -o cmTC_618a0 
+        /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/bin/ld: /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/lib/../lib64/libstdc++.so: undefined reference to `pthread_key_create@GLIBC_2.34'
+        /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/bin/ld: /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/lib/../lib64/libstdc++.so: undefined reference to `pthread_rwlock_unlock@GLIBC_2.34'
+        /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/bin/ld: /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/lib/../lib64/libstdc++.so: undefined reference to `pthread_detach@GLIBC_2.34'
+        /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/bin/ld: /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/lib/../lib64/libstdc++.so: undefined reference to `pthread_setspecific@GLIBC_2.34'
+        /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/bin/ld: /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/lib/../lib64/libgcc_s.so.1: undefined reference to `_dl_find_object@GLIBC_2.35'
+        /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/bin/ld: /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/lib/../lib64/libstdc++.so: undefined reference to `arc4random@GLIBC_2.36'
+        /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/bin/ld: /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/lib/../lib64/libstdc++.so: undefined reference to `pthread_join@GLIBC_2.34'
+        /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/bin/ld: /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/lib/../lib64/libstdc++.so: undefined reference to `pthread_rwlock_wrlock@GLIBC_2.34'
+        /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/bin/ld: /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/lib/../lib64/libstdc++.so: undefined reference to `__isoc23_strtoul@GLIBC_2.38'
+        /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/bin/ld: /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/lib/../lib64/libstdc++.so: undefined reference to `pthread_getspecific@GLIBC_2.34'
+        /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/bin/ld: /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/lib/../lib64/libstdc++.so: undefined reference to `pthread_key_delete@GLIBC_2.34'
+        /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/bin/ld: /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/lib/../lib64/libstdc++.so: undefined reference to `pthread_once@GLIBC_2.34'
+        /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/bin/ld: /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/lib/../lib64/libstdc++.so: undefined reference to `pthread_rwlock_rdlock@GLIBC_2.34'
+        /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/bin/ld: /home/viny/buildroot/buildroot-2024.08/output/host/lib/gcc/aarch64-Buildroot-linux-gnu/14.2.0/../../../../aarch64-Buildroot-linux-gnu/lib/../lib64/libstdc++.so: undefined reference to `pthread_create@GLIBC_2.34'
+        collect2: error: ld returned 1 exit status
+        gmake[1]: *** [CMakeFiles/cmTC_618a0.dir/build.make:99: cmTC_618a0] Error 1
+        gmake[1]: Leaving directory '/home/viny/Class_Code/Class_codification/build/RaspberryPi4-Release/CMakeFiles/CMakeScratch/TryCompile-GJBR1N'
+        gmake: *** [Makefile:127: cmTC_618a0/fast] Error 2
+        
+      exitCode: 2
+...
